@@ -16,36 +16,37 @@ namespace Admob.Droid
     {
         private IRewardedVideoAd mRewardedVideoAd;
 
+        public static MainActivity Instance;
+
         protected override void OnCreate(Bundle bundle)
         {
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
-
+            
             base.OnCreate(bundle);
 
-            MobileAds.Initialize(ApplicationContext, "ca-app-pub-3940256099942544~3347511713");
             //"ca-app-pub-7050516707411195/8444756290");
 
-
             // Use an activity context to get the rewarded video instance.
-            mRewardedVideoAd = MobileAds.GetRewardedVideoAdInstance(this);
+            //mRewardedVideoAd = MobileAds.GetRewardedVideoAdInstance(this);
             //mRewardedVideoAd.RewardedVideoAdListener = this;
 
-            loadRewardedVideoAd();
+            //loadRewardedVideoAd();
+            
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
+            MobileAds.Initialize(ApplicationContext, "ca-app-pub-7050516707411195~2913281915");
+
             LoadApplication(new App());
-
-            
         }
 
-        public void LoadVideo(object sender, EventArgs e)
-        {
-            if (mRewardedVideoAd.IsLoaded)
-            {
-                mRewardedVideoAd.Show();
-            }
-        }
+        //public void LoadVideo(object sender, EventArgs e)
+        //{
+        //    if (mRewardedVideoAd.IsLoaded)
+        //    {
+        //        mRewardedVideoAd.Show();
+        //    }
+        //}
 
         public void loadRewardedVideoAd()
         {

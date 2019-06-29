@@ -12,7 +12,10 @@ namespace Admob.Droid
 {
 	public class AdMobViewRenderer : ViewRenderer<AdMobView, AdView>
 	{
-		public AdMobViewRenderer(Context context) : base(context) { }
+        string adUnitId = "ca-app-pub-7050516707411195/4597911989";
+        AdSize adSize = AdSize.SmartBanner;
+
+        public AdMobViewRenderer(Context context) : base(context) { }
 		
 		protected override void OnElementChanged(ElementChangedEventArgs<AdMobView> e)
 		{
@@ -53,12 +56,12 @@ namespace Admob.Droid
         private AdView CreateAdView()
         {
             var adView = new AdView(Context)
-			{
-				AdSize = AdSize.SmartBanner,
-				AdUnitId = Element.AdUnitId
-			};
+            {
+                AdSize = AdSize.SmartBanner,
+                AdUnitId = adUnitId //Element.AdUnitId
+            };
 			
-			adView.LayoutParameters = new LinearLayout.LayoutParams(LayoutParams.MatchParent, LayoutParams.MatchParent); 
+			adView.LayoutParameters = new LinearLayout.LayoutParams(LayoutParams.WrapContent, LayoutParams.WrapContent); 
 
 			adView.LoadAd(new AdRequest
 							.Builder()

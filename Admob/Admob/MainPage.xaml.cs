@@ -9,10 +9,19 @@ namespace Admob
 {
 	public partial class MainPage : ContentPage
 	{
-		public MainPage()
-		{
-			InitializeComponent();
-			this.BindingContext = new MainPageViewModel();
+        public MainPage()
+        {
+            InitializeComponent();
+            this.BindingContext = new MainPageViewModel();
+
+            //MessagingCenter.Subscribe<MainPage, string>(this, "LoadVideo", (s, a) => {
+
+            //});
 		}
-	}
+
+        //public void LoadVideo(object sender, EventArgs e)
+        //{
+        //    //MainActivity.Instance.LoadVideo();
+        //}
+    }
 }
