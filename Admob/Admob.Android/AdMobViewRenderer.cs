@@ -25,7 +25,8 @@ namespace Admob.Droid
 			if (e.NewElement != null && Control == null)
 			{
                 //CreateAdViewInterstitialAd().Show();
-                SetNativeControl(CreateAdView());
+                //SetNativeControl(CreateAdView());
+                CreateRewardVideo().Show();
             }
 		}
 

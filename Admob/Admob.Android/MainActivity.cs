@@ -16,6 +16,8 @@ namespace Admob.Droid
     {
         public static MainActivity Instance;
 
+        RewardedVideoAd mRewardedVideoAd;
+
         protected override void OnCreate(Bundle bundle)
         {
             TabLayoutResource = Resource.Layout.Tabbar;
@@ -26,9 +28,6 @@ namespace Admob.Droid
             //"ca-app-pub-7050516707411195/8444756290");
 
             // Use an activity context to get the rewarded video instance.
-            //mRewardedVideoAd = MobileAds.GetRewardedVideoAdInstance(this);
-            //mRewardedVideoAd.RewardedVideoAdListener = this;
-
             //loadRewardedVideoAd();
             
 

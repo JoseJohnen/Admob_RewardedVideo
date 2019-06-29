@@ -9,7 +9,7 @@ using System.Diagnostics;
 
 namespace Admob.Droid
 {
-    public class RewardedVideoAd : IRewardedVideoAd
+    public class RewardedVideoAd : Java.Lang.Object, IRewardedVideoAd
     {
         private Context context;
 
@@ -20,7 +20,7 @@ namespace Admob.Droid
 
         public string AdUnitId { get; set; }
 
-        public IntPtr Handle => throw new NotImplementedException();
+        public IntPtr Handle => Admob.AdMobView.;
 
         public bool IsLoaded => throw new NotImplementedException();
 
