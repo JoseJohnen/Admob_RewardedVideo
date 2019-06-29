@@ -20,7 +20,7 @@ namespace Admob.Droid
 
         public string AdUnitId { get; set; }
 
-        public IntPtr Handle => Admob.AdMobView.;
+        public IntPtr Handle => throw new NotImplementedException();
 
         public bool IsLoaded => throw new NotImplementedException();
 
