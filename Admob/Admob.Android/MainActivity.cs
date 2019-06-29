@@ -12,10 +12,8 @@ using Android.Gms.Ads.Reward;
 namespace Admob.Droid
 {
     [Activity(Label = "Admob", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-    public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity, IRewardedVideoAdListener
+    public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
-        private IRewardedVideoAd mRewardedVideoAd;
-
         public static MainActivity Instance;
 
         protected override void OnCreate(Bundle bundle)
@@ -48,51 +46,10 @@ namespace Admob.Droid
         //    }
         //}
 
-        public void loadRewardedVideoAd()
-        {
-            mRewardedVideoAd.LoadAd("ca-app-pub-3940256099942544/5224354917",new AdRequest.Builder().Build());
-        }
-
-        public void OnRewarded(IRewardItem reward)
-        {
-            Toast.MakeText(this, "onRewarded! currency: ${reward.type} amount: ${reward.amount}",ToastLength.Short).Show();
-            // Reward the user.
-        }
-
-        public void OnRewardedVideoAdLeftApplication()
-        {
-            Toast.MakeText(this, "onRewardedVideoAdLeftApplication", ToastLength.Short).Show();
-        }
-
-        public void OnRewardedVideoAdClosed()
-        {
-            Toast.MakeText(this, "onRewardedVideoAdClosed", ToastLength.Short).Show();
-        }
-
-        public void OnRewardedVideoAdFailedToLoad(int errorCode)
-        {
-            Toast.MakeText(this, "onRewardedVideoAdFailedToLoad", ToastLength.Short).Show();
-        }
-
-        public void OnRewardedVideoAdLoaded()
-        {
-            Toast.MakeText(this, "onRewardedVideoAdLoaded", ToastLength.Short).Show();
-        }
-
-        public void OnRewardedVideoAdOpened()
-        {
-            Toast.MakeText(this, "onRewardedVideoAdOpened", ToastLength.Short).Show();
-        }
-
-        public void OnRewardedVideoStarted()
-        {
-            Toast.MakeText(this, "onRewardedVideoStarted", ToastLength.Short).Show();
-        }
-
-        public void OnRewardedVideoCompleted()
-        {
-            Toast.MakeText(this, "onRewardedVideoCompleted", ToastLength.Short).Show();
-        }
+        //public void loadRewardedVideoAd()
+        //{
+        //    mRewardedVideoAd.LoadAd("ca-app-pub-3940256099942544/5224354917",new AdRequest.Builder().Build());
+        //}
     }
 }
 
