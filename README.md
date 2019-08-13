@@ -11,7 +11,7 @@ Instructions
 
 Build Requirements
 ------------------
-Using this sample requires the Android SDK platform for Android 5.0 (API level 21).
+Using this sample requires the Android SDK platform for Android 9.0 (API level 28).
 
 
 Authors
